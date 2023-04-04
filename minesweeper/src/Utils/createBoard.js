@@ -12,5 +12,23 @@ export function createBoard(width, height, mines) {
     matrix.push(newRow);
   }
 
+  insertMines(matrix, mines);
+
   return matrix;
+}
+
+function insertMines(matrix, mines) {
+  
+  let minesToInsert = mines;
+
+  while(minesToInsert > 0 ) {
+    let row = Math.floor(Math.random() * matrix.length);
+    let col = Math.floor(Math.random() * matrix[0].length);
+
+    if(!matrix[row][col].isMine) {
+      matrix[row][col].isMine = true;
+    }
+
+    minesToInsert--;
+  }
 }

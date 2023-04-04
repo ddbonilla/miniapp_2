@@ -6,9 +6,9 @@ export default function Cell({
 }) {
 
     return (
-        <div className="container w-7 h-7 bg-gray-300 border border-1">
+        <div className="container w-8 h-8 bg-gray-300 border border-1">
             <span>
-                {value}
+                {isMine ? "bomb" : value}
             </span>
         </div>
     )

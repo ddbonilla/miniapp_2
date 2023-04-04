@@ -4,7 +4,7 @@ import { createBoard } from '../Utils/createBoard'
 import Cell from './Cell';
 
 const BOARD_SIZE = 20;
-const MINES_NUM = 20;
+const MINES_NUM = 30;
 
 export default function Board() {
     const [gamestate, dispatch ]= React.useReducer(gameReducer, {
